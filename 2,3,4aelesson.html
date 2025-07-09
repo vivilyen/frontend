@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2-4</title>
+    <style>
+        .request {
+          background-color: black;
+          color: white;  
+          padding-top: 15px;
+          padding-bottom: 15px;
+          padding-left: 20px;
+          padding-right: 20px;
+          border-style: none;
+          transition: opacity 0.5s;
+        }
+
+        .request:hover {
+            opacity: 0.7;
+            cursor: pointer;
+        }
+
+        .cart {
+            background-color: rgb(255, 216, 20);
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 40px;
+            padding-right: 40px;
+            border-style: none;
+            border-radius: 20px;
+            transition: background-color 0.5s;
+        }
+
+        .cart:hover {
+            background-color: rgb(240, 203, 22);
+            cursor: pointer;
+        }
+
+        .cart2{
+            background-color: rgb(255, 216, 20);
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-style: none;
+            border-radius: 15px;
+            transition: background-color 0.5s,
+                opacity 0.3s;
+        }
+
+        .cart2:hover{
+            background-color: rgb(218, 184, 19);
+            cursor: pointer;
+        }
+
+        .cart2:active {
+            opacity: 0.5;
+        }
+
+        .signup {
+            background-color: rgb(46, 164,79);
+            color: white;
+            border-style: none;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-weight: bold;
+            border-radius: 10px;
+            transition: box-shadow 0.7s;
+        }
+
+        .signup:hover {
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2) ;
+            cursor: pointer;
+        }
+
+        .getstarted {
+            margin-top: 10px;
+            background-color: rgb(121, 82, 179);
+            color: white;
+            font-weight: bold;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 5px;
+            border-style: none;
+            transition: background-color 0.3s;
+        }
+        
+        .getstarted:hover {
+            background-color: rgb(109, 62, 179);
+            cursor: pointer;
+        }
+
+        .download {
+            background-color: white;
+            color: rgb(108, 117, 125);
+            font-weight: bold;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 5px;
+            border: 1px solid rgb(108, 117, 125);
+            transition: background-color 0.3s,
+                color 0.2s;
+        }
+
+        .download:hover {
+            background-color: rgb(108, 117, 125);
+            color: white;
+            cursor: pointer;
+        }
+
+        .apply{
+            background-color: rgb(10,102,194);
+            margin-top: 10px;
+            color: white;
+            border-style: none;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .apply:hover {
+            background-color: rgb(9, 88, 167);
+            cursor: pointer;
+        }
+
+        .save {
+            background-color: white;
+            color: rgb(10,102,194);
+            border: 1px solid rgb(10,102,194);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: background-color 0.3s,
+                border-width 0.05s;
+        }
+
+        .save:hover {
+            background-color: rgba(78, 134, 190, 0.315);
+            border-width: 2px;
+            cursor: pointer;
+        }
+
+        a {
+            color: rgb(0,113, 133);
+        }
+
+        a:hover {
+            color: rgb(255, 164, 28);
+        }
+
+        .nike {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .stock {
+            color: rgb(0,118,0);
+            font-weight: bold;
+        }
+
+        .buy {
+            background-color: rgb(255, 164, 28);
+            padding-top: 8px;
+            padding-bottom: 8px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-style: none;
+            border-radius: 15px;
+            transition: background-color 0.5s,
+                opacity 0.3s;
+        }
+
+        .buy:hover{
+            background-color: rgb(214, 138, 23);
+            cursor: pointer;
+        }
+
+        .buy:active {
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <button class="request">Request now</button>
+    <button class="cart">Add to Cart</button>
+    <button class="signup">Sign up</button>
+    <br>
+    <button class="getstarted">Get started</button>
+    <button class="download">Download</button>
+    <br>
+    <button class="apply">Apply on company website</button>
+    <button class="save">Save</button>
+    <div>
+    <h2>Challenge</h2>
+    <a href="https://www.amazon.com" target="_blank">Back to Amazon</a>
+    <p class="nike">Nike Black Running Shoes</p>
+    <p class="stock">$39 - in stock.</p>
+    <p>Free delivery tomorrow.</p>
+    <button class="cart2">Add to Cart</button>
+    <button class="buy">Buy now</button>
+    </div>
+</body>
+</html>

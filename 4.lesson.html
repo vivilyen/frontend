@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4</title>
+    <style>
+        a {
+            margin: 5px;
+        }
+
+        .back {
+            padding-top: 7px;
+            padding-bottom: 7px;
+            margin-right: 10px;
+            border: 1px solid gray;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .next {
+            padding-top: 7px;
+            padding-bottom: 7px;
+            margin-left: 10px;
+            border: 1px solid gray;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .stretch {
+            background-color: green;
+            margin-top: 10px;
+            border-style: none;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            color: white;
+            transition: padding-top 0.5s,
+                padding-bottom 0.5s,
+                padding-left 0.5s,
+                padding-right 0.5s; /*nézd meg ezt lehet-e egyszerűbben is*/
+        }
+
+        .stretch:hover {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 30px;
+            padding-right: 30px;
+            cursor: pointer;
+        }
+
+        .shadow {
+            background-color: green;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-style: none;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            color: white;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5) ;
+        }
+
+        .shadow:hover {
+            cursor: pointer;
+        }
+
+        .shadow:active {
+            box-shadow: none;
+            margin-top: 12px;
+            margin-left: 2px;
+        }
+    </style>
+</head>
+<body>
+    <button class="back">Back</button>
+    <a href="">1</a>
+    <a href="">2</a>
+    <a href="">3</a>
+    <a href="">4</a>
+    <a href="">5</a>
+    <button class="next">Next</button>
+    <br>
+    <button class="stretch">Stretch</button>
+    <br>
+    <button class="shadow">Shadow</button>
+    <br>
+    <button class="one">One</button>
+    <button class="two">Two</button>
+    <button class="three">Three</button>
+</body>
+</html>
