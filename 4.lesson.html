@@ -36,10 +36,7 @@
             padding-left: 15px;
             padding-right: 15px;
             color: white;
-            transition: padding-top 0.5s,
-                padding-bottom 0.5s,
-                padding-left 0.5s,
-                padding-right 0.5s; /*nézd meg ezt lehet-e egyszerűbben is*/
+            transition: padding 0.5s;
         }
 
         .stretch:hover {
@@ -53,7 +50,7 @@
         .shadow {
             background-color: green;
             margin-top: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 2px;
             border-style: none;
             padding-top: 5px;
             padding-bottom: 5px;
@@ -71,6 +68,29 @@
             box-shadow: none;
             margin-top: 12px;
             margin-left: 2px;
+            margin-bottom: 0px;
+        }
+
+        .num {
+            background-color: green;
+            margin-top: 10px;
+            margin-left: 5px;
+            margin-right: 5px;
+            border-style: none;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            color: white;
+            transition: margin 0.1s,
+                padding 0.1s;
+        }
+
+        .num:hover {
+            padding-left: 17.5px;
+            padding-right: 17.5px;
+            margin-left: 2.5px;
+            margin-right: 2.5px;
         }
     </style>
 </head>
@@ -87,8 +107,8 @@
     <br>
     <button class="shadow">Shadow</button>
     <br>
-    <button class="one">One</button>
-    <button class="two">Two</button>
-    <button class="three">Three</button>
+    <button class="num">One</button>
+    <button class="num">Two</button>
+    <button class="num">Three</button>
 </body>
 </html>
