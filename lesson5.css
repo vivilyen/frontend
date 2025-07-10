@@ -1,0 +1,149 @@
+hr {
+    width: 500px;
+    margin-left: 0; 
+}
+
+.tahoma {
+    font-family:tahoma;
+    margin: 0px;
+}
+
+.deals {
+    margin: 10px 0px 0px 0px;
+    font-family: Arial;
+}
+
+.end {
+    margin: 5px 0px 0px 0px;
+    font-family: Arial;
+    color: red;
+    font-style: italic;
+}
+
+.course {
+    font-family: verdana;
+    margin: 10px 0px 0px 0px;
+}
+
+.course h2 {
+    margin: 0px;
+}
+
+.course p {
+    margin: 0px;
+    color: grey;
+}
+
+.course p+p {
+    margin: 20px 0px 0px 0px;
+    color: black;
+    width: 300px;
+}
+
+.course p+button {
+    margin: 20px 0px 0px 0px;
+    background-color: green;
+    color: white;
+    border-style: none;
+    padding:10px 15px 10px 15px;
+    border-radius: 5px;
+    font-family: verdana;
+    transition: opacity 0.2s;
+}
+
+.course p+button:hover {
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.business {
+    font-family: arial;
+    text-align: center;
+}
+
+.business span {
+    color:rgb(40, 77, 243);
+}
+
+.macbook :is(span, h1, h3, p, button) {
+  margin: 10px auto;
+  text-align: center;
+  font-family: arial;
+  display: block;
+}
+
+.macbook span{
+    font-size: small;
+    color: rgb(219, 143, 0);
+    font-weight: bold;
+}
+
+.macbook p {
+    font-size:15px;
+    color: rgb(77, 77, 77);
+}
+
+.macbook button {
+    background-color: rgb(40, 77, 243);
+    border-style: none;
+    padding: 5px 15px 5px 15px;
+    color: white;
+    border-radius: 15px;
+    transition: opacity 0.1s;
+}
+
+.macbook button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.currency {
+    font-family: arial;
+    margin:0px;
+    color: gray;
+    line-height: 20px;
+}
+
+.currency :first-child {
+    color: black;
+    font-size: larger;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.currency :not(:first-child) {
+    font-size: small;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.tweet {
+    font-family: arial;
+}
+
+.tweet strong {
+    margin-right: 5px;
+}
+
+.tweet strong+span {
+    color: gray;
+    margin-bottom: 4px;
+}
+
+.tweet p {
+    margin: 0px;
+}
+
+.tweet :first-child {
+    margin-bottom: 5px;
+}
+
+.blue {
+    color: rgb(64, 167, 226);
+}

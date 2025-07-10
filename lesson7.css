@@ -1,0 +1,92 @@
+.rounded {
+    width: 200px;
+    border-radius: 15px;
+}
+
+.square {
+    width: 150px;
+    height: 150px;
+    object-fit:cover;
+    object-position: bottom;
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    object-fit:cover;
+    object-position: bottom;
+    border-radius: 75px;
+}
+
+img {
+    margin: 10px;
+}
+
+.s-rounded {
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 120px;
+    height: 25px;
+    padding-left: 10px;
+}
+
+.s-google {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 320px;
+    padding: 5px 0px 5px 5px;
+    border-radius: 29px;
+    border-style: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3) ;
+}
+
+.linkedin {
+    margin-top: 15px;
+}
+
+.linkedin :is(span, p) {
+    color: gray;
+    font-family: arial;
+    font-size: 12px
+}
+
+.linkedin input {
+    margin-top: 5px;
+    border-radius: 2.5px;
+    border: 1px solid black;
+    width: 295px;
+    height: 20px;
+}
+
+.linkedin button {
+    background-color: rgb(10, 102, 194);
+    color: white;
+    border-style: none;
+    padding: 12px 110px 12px 110px;
+    border-radius: 20px;
+}
+
+.twitter-t-box :is(img, input, button) {
+    vertical-align: middle;
+}
+
+.twitter-t-box img {
+    width: 50px;
+    height: 50px;
+    object-fit:cover;
+    object-position: bottom;
+    border-radius: 75px;
+}
+
+.twitter-t-box input {
+    border-style: none;
+    font-size: 15px;
+}
+
+.twitter-t-box button {
+    color: white;
+    background-color: rgb(78, 157, 221);
+    border-style: none;
+    padding: 8px 15px 8px 15px;
+    border-radius: 15px;
+}
