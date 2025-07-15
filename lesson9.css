@@ -1,0 +1,149 @@
+.redbox {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+.greencircle {
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    margin-top: 10px;
+}
+
+.c {
+    border: 1px solid grey;
+    display: inline-block;
+    padding: 0px 100px 20px 10px;
+    margin-top: 10px;
+}
+
+.yt_music {
+    background-color: rgb(51, 51, 51);
+    display: inline-block;
+    margin-top: 10px;
+    font-family: arial;
+    padding: 0px 5px 0px 16px;
+    width: 300px;
+}
+
+.yt_music :first-child {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: large;
+}
+
+.yt_music :last-child {
+    color: gray;
+    font-size: small;
+    margin: 0px 0px 18px 0px;
+}
+
+.twitter-t-box {
+    border-style: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+    display: inline-block;
+    padding: 10px 15px 10px 10px;
+    border-radius: 5px;
+}
+
+.twitter-t-box :is(img, input, button) {
+    vertical-align: middle;
+}
+
+.twitter-t-box img {
+    width: 40px;
+    height: 40px;
+    object-fit:cover;
+    object-position: bottom;
+    border-radius: 75px;
+}
+
+.twitter-t-box input {
+    border-style: none;
+    font-size: 15px;
+    padding:0px 50px 0px 10px;
+}
+
+.twitter-t-box button {
+    color: white;
+    background-color: rgb(78, 157, 221);
+    border-style: none;
+    padding: 8px 15px 8px 15px;
+    border-radius: 15px;
+}
+
+.friend {
+    margin: 10px;
+    font-family: arial;
+    border-style: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+}
+.friend :is(img, span, button) {
+    display: block;
+}
+
+.friend img {
+    width: 180px;
+    height: 200px;
+    object-fit: cover;
+    object-position:top;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.friend :is(span, button) {
+    margin: 5px;
+}
+
+.mutuals {
+    color: gray;
+    font-size: 14px;
+}
+
+.friend button {
+    color: white;
+    background-color: rgb(49, 104, 221);
+    padding: 10px 15px 10px 15px;
+    border-style: none;
+    border-radius: 3px;
+    margin: 10px;
+}
+
+.google img{
+    width:200px;
+    display: block;
+    margin:0 auto;
+    margin-bottom: 10px;
+    margin-top: 10px
+}
+
+.google input{
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 400px;
+    padding: 10px 0px 10px 15px;
+    border-radius: 29px;
+    border-style: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3) ;
+    display: block;
+    margin:0 auto;
+}
+
+.buttons button {
+    border-style: none;
+    background-color: rgb(241, 240, 240);
+    padding: 10px;
+    margin: 30px 5px 10px 5px;
+}
+
+.buttons {
+    text-align: center;
+}

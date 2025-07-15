@@ -1,0 +1,86 @@
+.a {
+    display: grid;
+    grid-template-columns: 200px 75px;
+}
+
+.a :first-child, .b :is(:first-child,:last-child) {
+    background-color: lightblue;
+}
+
+.a :last-child, .b div, .c div {
+    background-color: lightpink;
+}
+
+.b {
+    display: grid;
+    grid-template-columns: 50px 1fr 75px;
+}
+
+.c {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 10px;
+}
+
+.friends {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+}
+
+.friend {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 10px;
+    font-family: arial;
+    border-style: none;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+}
+
+.friend img {
+    width: 180px;
+    height: 200px;
+    object-fit: cover;
+    object-position:top;
+    margin-bottom: 10px;
+}
+
+.mutuals {
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    align-items: center;
+}
+
+.mutuals img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    object-position:center;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    margin: 5px;
+}
+
+.name {
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.friend button {
+    margin: 5px;
+}
+
+.mutuals span {
+    color: gray;
+    font-size: 14px;
+    margin-left: 2px;
+}
+
+.friend button {
+    color: white;
+    background-color: rgb(49, 104, 221);
+    padding: 5px 5px 5px 5px;
+    border-style: none;
+    border-radius: 3px;
+    margin: 5px 80px 10px 5px;
+}
