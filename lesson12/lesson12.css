@@ -1,0 +1,49 @@
+.a {
+    display: flex;
+    
+}
+
+.a :first-child {
+    background-color: lightblue;
+    width: 200px;
+}
+
+.a :last-child {
+    background-color: lightpink;
+    width: 75px;
+}
+
+.b {
+    display: flex;
+    flex-direction: row;
+}
+
+.b :nth-child(even) {
+    background-color: lightpink;
+    flex: 1;
+}
+
+.b :nth-child(odd) {
+    background-color: lightblue;
+    width: 50px;
+}
+
+.c {
+    display: flex;
+    justify-content: space-between;
+}
+
+.c div {
+    background-color: lightpink;
+}
+
+.d {
+    display: flex;
+    border: 1px solid gray;
+    justify-content: space-between;
+    padding: 15px 0px 15px 0px;
+}
+
+.d div {
+    background-color: lightpink;
+}
