@@ -1,0 +1,114 @@
+.e {
+    display:flex;
+    flex-direction: column;
+    width: 250px;
+    border: 1px solid rgb(218, 214, 214);
+    border-radius: 5px;
+    padding: 2px 12px 2px 12px;
+}
+
+.home1,
+.notifies,
+.messages {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between ;
+    line-height: 35px;
+    font-family: arial;
+}
+
+.num {
+    display: flex;
+    align-items: center;
+    background-color: rgb(100, 149, 240);
+    color: white;
+    font-weight: bold;
+    height: 25px;
+    padding: 0px 10px 0px 10px;
+    border-radius: 15px;
+}
+
+.g {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    line-height: 70px;
+}
+
+.account {
+    display: flex;
+    justify-content: space-between;
+}
+
+.infos {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    line-height: 20px;
+    font-family: arial;
+}
+
+.pic {
+    display: flex;
+    width: 60px;
+}
+
+.pic img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    object-position: bottom;
+    border-radius: 50px;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.description {
+    color: gray;
+}
+
+.popularity {
+    color: gray;
+    font-size: 13px;
+}
+
+.button button {
+    color: white;
+    font-weight: 800;
+    background-color: rgb(70, 123, 238);
+    border-style: none;
+    padding: 8px 12px 8px 12px;
+    border-radius: 5px;
+}
+
+.f {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(132, 98, 228);
+    padding: 10px;
+}
+
+.home {
+    color: white;
+    font-weight: bold;
+    font-family: arial;
+}
+
+.search input {
+    width: 300px;
+    padding: 7px 0px 7px 15px;
+    border-style: none;
+    border-radius: 15px;
+}
+
+.download button {
+    background-color: transparent;
+    border: 1px solid white ;
+    color: white;
+    padding: 10px;
+}
