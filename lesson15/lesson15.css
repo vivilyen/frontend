@@ -1,0 +1,77 @@
+.gray_box {
+    position: fixed;
+    height: 180px;
+    width: 320px;
+    right: 10px;
+    bottom: 10px;
+    background-color: gray;
+}
+
+.close, .timestamp {
+    position: absolute;
+    background-color: black;
+    color: white;
+}
+
+.timestamp {
+    bottom: 5px;
+    right: 5px;
+    background-color: rgb(0, 0, 0);
+    padding: 4px;
+}
+
+.close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -18px;
+    left: -18px;
+    height: 45px;
+    width: 45px;
+    border-style: none;
+    border-radius: 45px;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+}
+
+.item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.discount {
+    position: absolute;
+    right: 0;
+    top:5px;
+    background-color: black;
+    color: white;
+    font-family: arial;
+    font-size: 12px;
+    padding: 5px;
+}
+
+.add-to-cart_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right: 0;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.add-to-cart_box button {
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px 10px 5px 10px;
+}
