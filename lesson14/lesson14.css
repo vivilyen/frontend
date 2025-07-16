@@ -1,0 +1,26 @@
+.a {
+    position: fixed;
+    background-color: black;
+    color: white;
+    right: 20px;
+    bottom: 20px;
+}
+
+.b {
+    position: fixed;
+    background-color: green;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100px;
+    color: white;
+}
+
+.c {
+    position: fixed;
+    background-color: black;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
