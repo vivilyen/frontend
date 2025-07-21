@@ -1,0 +1,178 @@
+header {
+    position: fixed;
+    top:0;
+    right: 0;
+    left:0;
+}
+
+.layout-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+    box-shadow: inset 0 0 20px rgba(231, 162, 248, 0.3);
+}
+
+.layout-1, .search-bar input {
+    font-family:"Bitcount Single", system-ui;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    left: 20px;
+    flex: 1;
+}
+
+.logo :is(img, span){
+    margin: 0 5px 0 5px;
+}
+
+.icon img, 
+.profile-pic img,
+.search-icon img,
+.filter-icon img{
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}
+
+.logo-icon img {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.menu img {
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+
+.account-info {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.icon, .profile-pic{
+    margin: 0 10px 0 10px;
+}
+
+.logo span {
+    font-size: 20px;
+}
+
+.search-bar {
+    display: flex;
+    background-color: rgba(231, 162, 248, 0.3);
+    padding: 0px 10px 0px 10px;
+    border-radius: 30px;
+    color: black;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.search-bar input {
+    display: flex;
+    flex: 1;
+    border-style: none;
+    background-color: transparent;
+    margin-left: 5px;
+}
+
+.search-bar input:focus {
+    outline: none;
+}
+
+.menu:hover,
+.search-icon:hover,
+.filter-icon:hover,
+.icon:hover,
+.profile-pic:hover {
+    background-color: rgba(231, 162, 248, 0.3);
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 10px;
+    transition: background-color 0.5s;
+}
+
+.logo-icon,
+.search-icon,
+.filter-icon,
+.icon,
+.profile-pic {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 30px;
+    transition: background-color 0.5s;
+}
+
+.logo-icon .tooltip,
+.search-icon .tooltip,
+.filter-icon .tooltip,
+.icon .tooltip{
+    position: absolute;
+    bottom: -40px;
+    opacity: 0;
+    cursor: default;
+    transition: opacity 0.5s;
+    background-color: rgba(231, 162, 248, 0.5);
+    padding: 2.5px 5px 2.5px 5px;
+    border-radius: 5px;
+}
+
+.profile-pic .tooltip{
+    position: absolute;
+    bottom: -40px;
+    opacity: 0;
+    right: 0;
+    cursor: default;
+    transition: opacity 0.5s;
+    background-color: rgba(231, 162, 248, 0.5);
+    padding: 2.5px 5px 2.5px 5px;
+    border-radius: 5px;
+}
+
+.menu .tooltip {
+    position: absolute;
+    bottom: -40px;
+    left: 10px;
+    opacity: 0;
+    cursor: default;
+    transition: opacity 0.5s;
+    background-color: rgba(231, 162, 248, 0.5);
+    padding: 2.5px 5px 2.5px 5px;
+    border-radius: 5px;
+}
+
+.menu:hover .tooltip,
+.logo-icon:hover .tooltip,
+.search-icon:hover .tooltip,
+.filter-icon:hover .tooltip,
+.icon:hover .tooltip,
+.profile-pic:hover .tooltip{
+    opacity: 1;
+    transition-delay: 1s;
+}
+
+.favicon {
+    display: flex;
+    align-items: center;
+}
+
+.favicon:hover {
+    cursor: pointer;
+}
