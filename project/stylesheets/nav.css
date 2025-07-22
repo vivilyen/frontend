@@ -1,0 +1,150 @@
+nav {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    z-index: 1000;
+}
+
+.folders {
+    position: fixed;
+    top: 150px;
+    left: 0;
+}
+
+.folders img{
+    width: 23px;
+    height: 23px;
+    object-fit: cover;
+}
+
+.folders-pic, .text-2 {
+    display: flex;
+    align-items: center;
+    padding: 7px;
+}
+
+.navigation-bar {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.button-pic img {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+}
+
+.compose {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-family:"Bitcount Single", system-ui;
+}
+
+.inbox,
+.starred,
+.snoozed,
+.important,
+.sent,
+.drafts,
+.categories {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-family:"Bitcount Single", system-ui;
+    padding: 0px 20px 0px 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.inbox .tooltip,
+.starred .tooltip,
+.snoozed .tooltip,
+.important .tooltip,
+.sent .tooltip,
+.drafts .tooltip,
+.categories .tooltip{
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    left: 210px;
+    cursor: default;
+    visibility: hidden;
+    background-color: rgba(231, 162, 248, 0.5);
+    padding: 2.5px 5px 2.5px 5px;
+    border-radius: 5px;
+    transition: visibility 0.3s;
+}
+
+.inbox:hover .tooltip,
+.starred:hover .tooltip,
+.snoozed:hover .tooltip,
+.important:hover .tooltip,
+.sent:hover .tooltip,
+.drafts:hover .tooltip,
+.categories:hover .tooltip {
+    visibility: visible;
+    transition-delay: 0.7s;
+}
+
+.button {
+    display: flex; 
+    background-color: white;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    transition: box-shadow 0.2s;
+    transition: background-color 0.3s;
+}
+
+.inbox:hover,
+.starred:hover,
+.snoozed:hover,
+.important:hover,
+.sent:hover,
+.drafts:hover,
+.categories:hover {
+    background-color: rgba(211, 149, 226, 0.445);
+    cursor: pointer;
+}
+
+.button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(211, 149, 226, 0.445);
+}
+
+.inbox:active,
+.starred:active,
+.snoozed:active,
+.important:active,
+.sent:active,
+.drafts:active,
+.categories:active,
+.button:active {
+    background-color:rgba(137, 43, 226, 0.644);
+}
+
+.button-pic {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex: 1;
+    padding: 15px;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex:1;
+    padding: 15px 15px 15px 5px;
+}

@@ -1,0 +1,153 @@
+main {
+    background-color: rgba(137, 43, 226, 0.527);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 15px;
+    right:15px;
+    top: 65px;
+    left: 250px;
+    font-family:"Bitcount Single", system-ui;
+    overflow: auto;
+} 
+
+.checkboxes img, .main-header img {
+    width: 23px;
+    height: 23px;
+}
+
+.checkboxes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100px;
+    padding: 10px;
+}
+
+.emails {
+    display: flex;
+    flex-direction: column;
+}
+
+.email {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: background-color 0;
+    border: 0.5px solid rgba(137, 43, 226, 0.144);
+}
+
+.name {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 150px;
+    padding-left: 10px;
+}
+
+.message {
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 10px;
+}
+
+.timestamp {
+    display: flex;
+    width: 200px;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+} 
+
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.pages {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    padding: 10px;
+}
+
+.email:hover {
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(137, 43, 226, 0.644);
+}
+
+.all-emails {
+    cursor: pointer;
+}
+
+.checkbox input, .main-header-checkbox input {
+    cursor: pointer;
+}
+
+.checkboxes .checkbox,
+.checkboxes .img,
+.main-header-checkbox,
+.pages .img {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    transition: background-color 0.3s;
+    padding: 5px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.checkboxes .checkbox:hover,
+.checkboxes .img:hover,
+.main-header-checkbox:hover,
+.pages .img:hover {
+    background-color: rgba(211, 149, 226, 0.445);
+}
+
+.checkboxes .checkbox:active,
+.checkboxes .img:active,
+.main-header-checkbox:active,
+.pages .img:active {
+    background-color:rgba(137, 43, 226, 0.644);
+}
+
+.checkboxes .checkbox .tooltip,
+.checkboxes .img .tooltip,
+.main-header-checkbox .tooltip,
+.pages .img .tooltip {
+    white-space: nowrap;
+    position: absolute;
+    bottom: -40px;
+    visibility: hidden;
+    cursor: default;
+    background-color: rgba(231, 162, 248, 0.5);
+    padding: 2.5px 5px 2.5px 5px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.checkboxes .checkbox .tooltip,
+.main-header-checkbox .tooltip {
+    left: 10px;
+}
+
+.pages:last-child .img .tooltip {
+    right: 10px;
+}
+
+.checkboxes .checkbox:hover .tooltip,
+.checkboxes .img:hover .tooltip,
+.main-header-checkbox:hover .tooltip,
+.pages .img:hover .tooltip {
+    visibility: visible;
+    transition-delay: 0.5s;
+}

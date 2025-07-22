@@ -3,6 +3,7 @@ header {
     top:0;
     right: 0;
     left:0;
+    z-index: 1001;
 }
 
 .layout-1 {
@@ -10,7 +11,6 @@ header {
     align-items: center;
     justify-content: space-between;
     height: 65px;
-    box-shadow: inset 0 0 20px rgba(231, 162, 248, 0.3);
 }
 
 .layout-1, .search-bar input {
@@ -21,7 +21,7 @@ header {
     display: flex;
     align-items: center;
     left: 20px;
-    flex: 1;
+    width: 250px;
 }
 
 .logo :is(img, span){
@@ -65,7 +65,7 @@ header {
 
 .search-bar {
     display: flex;
-    background-color: rgba(231, 162, 248, 0.3);
+    background-color: rgba(211, 149, 226, 0.445);
     padding: 0px 10px 0px 10px;
     border-radius: 30px;
     color: black;
@@ -90,8 +90,16 @@ header {
 .filter-icon:hover,
 .icon:hover,
 .profile-pic:hover {
-    background-color: rgba(231, 162, 248, 0.3);
+    background-color: rgba(211, 149, 226, 0.445);
     cursor: pointer;
+}
+
+.menu:active,
+.search-icon:active,
+.filter-icon:active,
+.icon:active,
+.profile-pic:active {
+    background-color:rgba(137, 43, 226, 0.644);
 }
 
 .menu {
@@ -103,7 +111,7 @@ header {
     border-radius: 50%;
     padding: 10px;
     margin-left: 10px;
-    transition: background-color 0.5s;
+    transition: background-color 0.3s;
 }
 
 .logo-icon,
@@ -117,45 +125,31 @@ header {
     justify-content: center;
     padding: 10px;
     border-radius: 30px;
-    transition: background-color 0.5s;
+    transition: background-color 0.3s;
 }
 
 .logo-icon .tooltip,
 .search-icon .tooltip,
 .filter-icon .tooltip,
-.icon .tooltip{
+.icon .tooltip,
+.profile-pic .tooltip,
+.menu .tooltip{
     position: absolute;
     bottom: -40px;
-    opacity: 0;
+    visibility: hidden;
     cursor: default;
-    transition: opacity 0.5s;
+    transition: visibility 0.3s;
     background-color: rgba(231, 162, 248, 0.5);
     padding: 2.5px 5px 2.5px 5px;
     border-radius: 5px;
 }
 
 .profile-pic .tooltip{
-    position: absolute;
-    bottom: -40px;
-    opacity: 0;
     right: 0;
-    cursor: default;
-    transition: opacity 0.5s;
-    background-color: rgba(231, 162, 248, 0.5);
-    padding: 2.5px 5px 2.5px 5px;
-    border-radius: 5px;
 }
 
 .menu .tooltip {
-    position: absolute;
-    bottom: -40px;
     left: 10px;
-    opacity: 0;
-    cursor: default;
-    transition: opacity 0.5s;
-    background-color: rgba(231, 162, 248, 0.5);
-    padding: 2.5px 5px 2.5px 5px;
-    border-radius: 5px;
 }
 
 .menu:hover .tooltip,
@@ -164,8 +158,8 @@ header {
 .filter-icon:hover .tooltip,
 .icon:hover .tooltip,
 .profile-pic:hover .tooltip{
-    opacity: 1;
-    transition-delay: 1s;
+    visibility: visible;
+    transition-delay: 0.5s;
 }
 
 .favicon {
@@ -176,3 +170,4 @@ header {
 .favicon:hover {
     cursor: pointer;
 }
+
