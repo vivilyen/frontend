@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5</title>
+    <script>
+        let calculation='';
+        let quantity=0;
+        const name = 'Vivien';
+        console.log(name);
+        const cost=5+2*3+9;
+        console.log(`Cost of food: $${cost}`);
+        const tax=cost*0.1;
+        console.log(`Tax(10%): $${tax}`);
+        const totalCost=tax+cost;
+        console.log(`Total cost: $${totalCost}`);
+    </script>
+</head>
+<body>
+    <h2>Cart Quantity</h2>
+    <button 
+        onclick="console.log(`Cart quantity: ${quantity}`)">
+        Show Quantity
+    </button>
+    <button 
+        onclick="
+        if (quantity >= 10) {
+            alert('Cart is full.');
+        } else {
+            quantity++;
+            console.log(`Cart quantity: ${quantity}`)
+        }
+        ">
+        Add to Cart
+    </button>
+    <button 
+        onclick="
+        if (quantity <= 0) {
+            alert('Cart is empty.');
+        } else {
+            quantity--;
+            console.log(`Cart quantity: ${quantity}`)
+        }">
+        Remove from Cart
+    </button>
+    <button 
+        onclick="
+        if (quantity <= 0) {
+            alert('Cart is empty.');
+        } else {
+            quantity=-2;
+            console.log(`Cart quantity: ${quantity}`)
+        }">
+        -2
+    </button>
+    <button 
+        onclick="
+        if (quantity <= 0) {
+            alert('Cart is empty.');
+        } else {
+            quantity=-3;
+            console.log(`Cart quantity: ${quantity}`)
+        }">
+        -3
+    </button>
+    <button 
+        onclick="
+        if (quantity >= 10) {
+            alert('Cart is full.');
+        } else {
+            quantity+=2;
+            console.log(`Cart quantity: ${quantity}`)
+        }">
+        +2
+    </button>
+    <button 
+        onclick="
+        if (quantity >= 10) {
+            alert('Cart is full.');
+        } else {
+            quantity+=3;
+            console.log(`Cart quantity: ${quantity}`)
+        }">
+        +3
+    </button>
+    <button 
+        onclick="
+        if (quantity >= 10) {
+            alert('Cart is full.');
+        } else {
+            quantity+=4;
+            console.log(`Cart quantity: ${quantity}`)
+        }">
+        +4
+    </button>
+    <button 
+        onclick="
+        if (quantity >= 10) {
+            alert('Cart is full.');
+        } else {
+            quantity+=5;
+            console.log(`Cart quantity: ${quantity}`)
+        }">
+        +5
+    </button>
+    <button 
+        onclick="quantity=0;
+        console.log(`Cart was reset.\nCart quantity: ${quantity}`)">
+        Reset Cart
+    </button>  
+    <h2>Calculator</h2>
+    <button
+        onclick="calculation+='1';console.log(calculation)"
+        >1
+    </button>
+    <button
+        onclick="calculation+='2';console.log(calculation)"
+        >2
+    </button>
+    <button
+        onclick="calculation+='3';console.log(calculation)"
+        >3
+    </button>
+    <br>
+    <button
+        onclick="calculation+='4';console.log(calculation)"
+        >4
+    </button>
+    <button
+        onclick="calculation+='5';console.log(calculation)"
+        >5
+    </button>
+    <button
+        onclick="calculation+='6';console.log(calculation)"
+        >6
+    </button>
+    <br>
+    <button
+        onclick="calculation+='7';console.log(calculation)"
+        >7
+    </button>
+    <button
+        onclick="calculation+='8';console.log(calculation)"
+        >8
+    </button>
+    <button
+        onclick="calculation+='9';console.log(calculation)"
+        >9
+    </button>
+    <br>
+    <button
+        onclick="calculation+=' * ';console.log(calculation)"
+        >*
+    </button>
+    <button
+        onclick="calculation+=' + ';console.log(calculation)"
+        >+
+    </button>
+    <button
+        onclick="calculation+=' - ';console.log(calculation)"
+        >-
+    </button>
+    <button
+        onclick="console.log(eval(calculation)); calculation=''"
+        >=
+    </button>
+</body>
+</html>
