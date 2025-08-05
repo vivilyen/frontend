@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 7</title>
+    <script>
+        function greet(name) {
+            name ? console.log(`Hello ${name}!`) : console.log('Hello there!');
+        }
+
+        function CelsiustoFahrenheit (celsius) {
+            let fahrenheit = (celsius*9/5)+32;
+            return fahrenheit;
+        }
+
+        function FahrenheittoCelsius (fahrenheit) {
+            let celsius = (fahrenheit-32)*5/9;
+            return celsius;
+        }
+
+        function convertLength(length, from, to) {
+            let converted;
+
+            if (from != 'miles' && from != 'km') {
+                return `Invalid unit: ${from}`;
+            } else if (to != 'miles' && to != 'km') {
+                return `Invalid unit: ${to}`;
+            }
+
+            from==='miles'
+                ? converted=(length*16)/10
+                : (from==='miles' && to === 'km')
+                    ? converted=(length/16)*10
+                    : converted=length;
+            return converted + (` ${to}`);
+
+        }
+
+        greet('Vivien');
+        console.log(CelsiustoFahrenheit(25));
+        console.log(FahrenheittoCelsius(86));
+        console.log(convertLength(50, 'miles', 'km'));
+        console.log(convertLength(32, 'km', 'miles'));
+        console.log(convertLength(50, 'km', 'km'));
+        console.log(convertLength(5, 'lbs', 'km'));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

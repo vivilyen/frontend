@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8</title>
+    <script>
+
+        const basketball = {
+            price: 2095,
+            'delivery-time': '3 days'
+        };
+
+        console.log(basketball.price);
+        console.log(basketball.price+=500);
+        console.log(basketball['delivery-time']);
+
+        function comparePrice (product1, product2) {
+            return product1.price < product2.price ? product1.name : product2.name;
+        }
+        
+        const dress = {
+            name: 'dress',
+            price: 3000
+        };
+
+        const hat = {
+            name: 'hat',
+            price: 2500
+        };
+
+        const hat2 = {
+            name: 'hat',
+            price: 2500
+        };
+
+        console.log(comparePrice(hat, dress));
+
+        function isSameProduct(product1, product2) {
+            return (product1.name === product2.name) && (product1.price === product2.price) ? true : false;
+        }
+
+        console.log(isSameProduct(hat, hat2));
+
+        console.log('Good Morning'.toLowerCase());
+
+        console.log('test'.repeat(2));
+
+    </script>
+</head>
+<body>
+    <!-- 8i-től folyt -->
+</body>
+</html>

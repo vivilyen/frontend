@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5</title>
+    <script>
+        let calculation=localStorage.getItem('calc') || '';
+        console.log(calculation);
+        let quantity=0;
+        const name = 'Vivien';
+        console.log(name);
+        const cost=5+2*3+9;
+        console.log(`Cost of food: $${cost}`);
+        const tax=cost*0.1;
+        console.log(`Tax(10%): $${tax}`);
+        const totalCost=tax+cost;
+        console.log(`Total cost: $${totalCost}`);
+
+        function updateCalculation (button) {
+            typeof(button) === "number" ? calculation+=`${button}` : calculation+=` ${button} `;
+            console.log(calculation);
+            localStorage.setItem('calc', calculation);
+        }
+
+        function updateCartQuantity (operator, num) {
+            if (quantity >= 10 && operator === '+') {
+                return alert('Cart is full.');
+            } else if (quantity <= 0 && operator === '-') {
+                return alert('Cart is empty.');
+            } else if (operator==='+') {
+                quantity+=num;
+                return console.log(`Cart quantity: ${quantity}`)
+            } else if (operator==='-') {
+                quantity-=num;
+                return console.log(`Cart quantity: ${quantity}`)
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Cart Quantity</h2>
+    <button 
+        onclick="console.log(`Cart quantity: ${quantity}`)">
+        Show Quantity
+    </button>
+    <button 
+        onclick="
+            updateCartQuantity('+', 1);
+        ">
+        Add to Cart
+    </button>
+    <button 
+        onclick="
+        updateCartQuantity('-', 1);
+        ">
+        Remove from Cart
+    </button>
+    <button 
+        onclick="
+        updateCartQuantity('-', 2);
+        ">
+        -2
+    </button>
+    <button 
+        onclick="
+        updateCartQuantity('-', 3);
+        ">
+        -3
+    </button>
+    <button 
+        onclick="
+        updateCartQuantity('+', 2);
+        ">
+        +2
+    </button>
+    <button 
+        onclick="
+        updateCartQuantity('+', 3);
+        ">
+        +3
+    </button>
+    <button 
+        onclick="
+        updateCartQuantity('+', 4);
+        ">
+        +4
+    </button>
+    <button 
+        onclick="
+        updateCartQuantity('+', 5);
+        ">
+        +5
+    </button>
+    <button 
+        onclick="quantity=0;
+        console.log(`Cart was reset.\nCart quantity: ${quantity}`)">
+        Reset Cart
+    </button>  
+    <h2>Calculator</h2>
+    <button
+        onclick="updateCalculation(1)"
+        >1
+    </button>
+    <button
+        onclick="updateCalculation(2)"
+        >2
+    </button>
+    <button
+        onclick="updateCalculation(3)"
+        >3
+    </button>
+    <br>
+    <button
+        onclick="updateCalculation(4)"
+        >4
+    </button>
+    <button
+        onclick="updateCalculation(5)"
+        >5
+    </button>
+    <button
+        onclick="updateCalculation(6)"
+        >6
+    </button>
+    <br>
+    <button
+        onclick="updateCalculation(7)"
+        >7
+    </button>
+    <button
+        onclick="updateCalculation(8)"
+        >8
+    </button>
+    <button
+        onclick="updateCalculation(9)"
+        >9
+    </button>
+    <br>
+    <button
+        onclick="updateCalculation('*')"
+        >*
+    </button>
+    <button
+        onclick="updateCalculation('/')"
+        >/
+    </button>
+    <button
+        onclick="updateCalculation('+')"
+        >+
+    </button>
+    <button
+        onclick="updateCalculation('-')"
+        >-
+    </button>
+    <button
+        onclick="console.log(eval(calculation));
+        localStorage.setItem('calc', calculation);"
+        >=
+    </button>
+    <button onclick="
+        calculation=''; 
+        console.log(calculation);
+        localStorage.removeItem('calc', calculation)"
+    >Clear</button>
+    
+</body>
+</html>
