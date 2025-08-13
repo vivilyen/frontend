@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lesson 8</title>
     <script>
+        const score = JSON.parse(localStorage.getItem('score')) ||
+        {
+            wins: 0,
+            losses: 0
+        };
 
         const basketball = {
             price: 2095,
@@ -46,9 +51,37 @@
 
         console.log('test'.repeat(2));
 
+        let result;
+        let guess = '';
+
+        function playGame (guess) {
+            const random = Math.random();
+            random > 0.5 ? result = "heads" : result = "tails";
+            console.log(result);
+            if (result === guess) {
+                console.log("You win!");
+                score.wins += 1;
+            } else {
+                console.log("You lose!");
+                score.losses += 1;
+            }
+            localStorage.setItem('score', JSON.stringify(score));
+            console.log(`Wins: ${score.wins} Losses: ${score.losses}`);
+        }
     </script>
 </head>
 <body>
-    <!-- 8i-től folyt -->
+    <button onclick="
+    playGame('heads');
+    ">heads</button>
+    <button onclick="
+    playGame('tails');
+    ">tails</button>
+    <button onclick="
+        score.wins = 0;
+        score.losses = 0;
+        localStorage.removeItem('score');
+    "
+    >Reset score</button>
 </body>
 </html>
