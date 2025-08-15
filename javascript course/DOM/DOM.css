@@ -1,5 +1,45 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .subscribe,
 .rock_paper_scissors,
 .amazon {
     margin-bottom: 50px;
+}
+
+.js-subscribe-button {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px 10px 15px;
+    border-radius: 20px;
+    border-style: none;
+    cursor: pointer;
+}
+
+.is-subscribed {
+    background-color: rgb(240,240,240);
+    color: black;
+}
+
+.amazon2 {
+    display: flex;
+}
+
+.amazon2 :is(button, input) {
+    margin-left: 5px;
+}
+
+.cost-input {
+    font-size: 15px;
+    padding: 10px;
+}
+
+.calculate-button {
+    background-color: green;
+    border-style: none;
+    padding: 13px;
+    color: white;
+    cursor: pointer;
 }

@@ -1,0 +1,53 @@
+.amazon-button {
+    background-color: rgb(255, 216, 20);
+    padding: 7px 40px 7px 40px;
+    border-style: none;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.uber-request-button {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+    border-style: none;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.uber-schedule-button {
+    background-color: rgb(230, 230, 230);
+    color: black;
+    font-weight: bold;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
+}
+
+.js-button {
+    margin-bottom: 10px;
+}
+
+.gaming-button,
+.tech-button,
+.music-button {
+    background-color: rgb(230, 230, 230);
+    border-style: none;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.is-toggled {
+    background-color: black;
+    color: rgb(230, 230, 230);
+    border-style: none;
+    padding: 10px 15px 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}

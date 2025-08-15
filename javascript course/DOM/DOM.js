@@ -1,17 +1,30 @@
 function subscribe () {
-            const buttonElement = document.querySelector('.js-subscribe-button');
+    const buttonElement = document.querySelector('.js-subscribe-button');
 
-            buttonElement.innerText === 'Subscribe' ? 
-                buttonElement.innerText = 'Subscribed' : buttonElement.innerText = 'Subscribe';
-        }
+    if (buttonElement.innerText === 'Subscribe') {
+        buttonElement.innerHTML = 'Subscribed';
+        buttonElement.classList.add('is-subscribed');
+    } else {
+        buttonElement.innerHTML = 'Subscribe';
+        buttonElement.classList.remove('is-subscribed');
+    }
+}
 
-        function calcTotal () {
-            const inputElement = document.querySelector('.js-input');
-            let cost = Number(inputElement.value);
-            cost < 40 ? cost+=10 : undefined;
-            document.querySelector('.js-calculation').innerHTML = `$${cost}`;
-        }
+let varCalculation = document.querySelector('.js-calculation');
 
-        function handleCostKeydown (event) {
-            event.key === 'Enter' ? calcTotal() : undefined;
-        }
+function calcTotal () {
+    const inputElement = document.querySelector('.js-input');
+    let cost = Number(inputElement.value);
+    if (cost > 0 && cost < 40) {
+        cost+=10;
+        varCalculation.innerHTML = `$${cost}`;
+    } else if (cost > 40) {
+        varCalculation.innerHTML = `$${cost}`;
+    } else {
+        varCalculation.innerHTML = '';
+    }
+}
+
+function handleCostKeydown (event) {
+    event.key === 'Enter' ? calcTotal() : undefined;
+}

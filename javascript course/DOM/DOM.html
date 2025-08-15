@@ -10,7 +10,7 @@
 <body>
     <div class="subscribe">
         <p>Youtube Subscribe Button</p>
-        <button onclick="subscribe()" class="js-subscribe-button">Subscribed</button>
+        <button onclick="subscribe()" class="js-subscribe-button">Subscribe</button>
     </div>
     <div class="rock_paper_scissors">
         <p>Rock Paper Scissors</p>
@@ -20,8 +20,10 @@
         <p>Amazon Shipping Calculator</p>
         <p>Orders under $40 = +$10 shipping.</p>
         <p>Orders over $40 = FREE shipping.</p>
-        <input type="text" placeholder="Cost of order" class="js-input" onkeydown="handleCostKeydown(event)">
-        <button onclick="calcTotal()">Calculate</button>
+        <div class="amazon2">
+            <input placeholder="Cost of order" class="js-input cost-input" onkeydown="handleCostKeydown(event)">
+            <button onclick="calcTotal()" class="calculate-button">Calculate</button>
+        </div>
         <p class="js-calculation"></p>
     </div>
 </body>

@@ -3,7 +3,7 @@ let score = JSON.parse(localStorage.getItem('score')) || {
     losses: 0,
     ties: 0
 };
-document.querySelector('.js-result').innerHTML =`<p>Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}</p>`;
+document.querySelector('.js-points').innerHTML =`Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`;
 let user_pick;
 let result;
 function pickMove () {
@@ -35,13 +35,22 @@ function pickMove () {
 
     localStorage.setItem('score', JSON.stringify(score));
 
-    document.querySelector('.js-result').innerHTML =
-    `<p>${result}</p>
-    <p>You ${user_pick} - ${computer_pick} Computer</p>
-    <p>Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}</p>`;
+    document.querySelector('.js-result').innerHTML =`${result}`;
+    document.querySelector('.js-pick').innerHTML = `You ${picstoPicks(user_pick)} ${picstoPicks(computer_pick)} Computer`;
+    document.querySelector('.js-points').innerHTML = `Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`;
 
     user_pick = '';
     result = '';
+}
+
+function picstoPicks (pick) {
+    if (pick === 'rock') {
+        return '<img class="choice-pic" src="images/rock-emoji.png">';
+    } else if (pick === 'paper') {
+        return '<img class="choice-pic" src="images/paper-emoji.png">';
+    } else if (pick === 'scissors') {
+    return '<img class="choice-pic" src="images/scissors-emoji.png">';
+    }
 }
 
 function resetButton () {
@@ -49,5 +58,7 @@ function resetButton () {
     score.losses = 0;
     score.ties = 0;
     localStorage.removeItem('score');
-    document.querySelector('.js-result').innerHTML =`<p>Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}</p>`;
+    document.querySelector('.js-result').innerHTML ='';
+    document.querySelector('.js-pick').innerHTML = '';
+    document.querySelector('.js-points').innerText =`Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`;
 }
