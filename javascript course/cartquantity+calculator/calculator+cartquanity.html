@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator+cartquantity.css">
     <script src="calculator+cartquantity.js" defer></script>
     <title>Lesson 5</title>
 </head>
@@ -70,76 +71,88 @@
         Reset Cart
     </button>  
     <p class="js-current-quantity"></p>
-    <h2>Calculator</h2>
-    <p class="js-display-calculation"></p>
-    <button
-        onclick="updateCalculation(1)"
-        >1
-    </button>
-    <button
-        onclick="updateCalculation(2)"
-        >2
-    </button>
-    <button
-        onclick="updateCalculation(3)"
-        >3
-    </button>
-    <br>
-    <button
-        onclick="updateCalculation(4)"
-        >4
-    </button>
-    <button
-        onclick="updateCalculation(5)"
-        >5
-    </button>
-    <button
-        onclick="updateCalculation(6)"
-        >6
-    </button>
-    <br>
-    <button
-        onclick="updateCalculation(7)"
-        >7
-    </button>
-    <button
-        onclick="updateCalculation(8)"
-        >8
-    </button>
-    <button
-        onclick="updateCalculation(9)"
-        >9
-    </button>
-    <br>
-    <button
-        onclick="updateCalculation('*')"
-        >*
-    </button>
-    <button
-        onclick="updateCalculation('/')"
-        >/
-    </button>
-    <button
-        onclick="updateCalculation('+')"
-        >+
-    </button>
-    <br>
-    <button
-        onclick="updateCalculation('-')"
-        >-
-    </button>
-    <button
-        onclick="console.log(eval(calculation));
-        showCalculation();
-        localStorage.setItem('calc', calculation);"
-        >=
-    </button>
-    <button onclick="
-        calculation=''; 
-        console.log(calculation);
-        displayCalculation.innerHTML = '';
-        localStorage.removeItem('calc', calculation)"
-    >Clear</button>
-    
+    <div class="calculator_box">
+        <h2>Calculator</h2>
+        <div class="calculator">
+            <p class="js-display-calculation css-display-calculation"></p>
+            <button class="number"
+                onclick="updateCalculation(1)"
+                >1
+            </button>
+            <button class="number"
+                onclick="updateCalculation(2)"
+                >2
+            </button>
+            <button class="number"
+                onclick="updateCalculation(3)"
+                >3
+            </button>
+            <button class="operation"
+                onclick="updateCalculation('+')"
+                >+
+            </button>
+            <br>
+            <button class="number"
+                onclick="updateCalculation(4)"
+                >4
+            </button>
+            <button class="number"
+                onclick="updateCalculation(5)"
+                >5
+            </button>
+            <button class="number"
+                onclick="updateCalculation(6)"
+                >6
+            </button>
+            <button class="operation"
+                onclick="updateCalculation('-')"
+                >-
+            </button>
+            <br>
+            <button class="number"
+                onclick="updateCalculation(7)"
+                >7
+            </button>
+            <button class="number"
+                onclick="updateCalculation(8)"
+                >8
+            </button>
+            <button class="number"
+                onclick="updateCalculation(9)"
+                >9
+            </button>
+            <button class="operation"
+                onclick="updateCalculation('*')"
+                >*
+            </button>
+            <br>
+            <button class="number"
+                onclick="updateCalculation(0)"
+                >0
+            </button>
+            <button class="number"
+                onclick="updateCalculation('.')"
+                >.
+            </button>
+            <button class="number"
+                onclick="console.log(eval(calculation));
+                showCalculation();
+                localStorage.setItem('calc', calculation);"
+                >=
+            </button>
+            <button class="operation"
+                onclick="updateCalculation('/')"
+                >/
+            </button>
+            <br>
+            <button class="clear"
+                onclick="
+                calculation=''; 
+                console.log(calculation);
+                displayCalculation.innerHTML = '';
+                localStorage.removeItem('calc', calculation)"
+            >Clear</button>
+        </div>
+    </div>
 </body>
 </html>

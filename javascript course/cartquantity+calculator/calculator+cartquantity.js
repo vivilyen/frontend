@@ -6,8 +6,9 @@ let displayCalculation = document.querySelector('.js-display-calculation');
 showCalculation();
 showQuantity();
 
+
 function updateCalculation (button) {
-    typeof(button) === "number" ? calculation+=`${button}` : calculation+=` ${button} `;
+    calculation+=`${button}`;
     console.log(calculation);
     displayCalculation.innerHTML = calculation;
     localStorage.setItem('calc', calculation);

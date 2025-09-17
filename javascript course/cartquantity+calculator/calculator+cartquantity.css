@@ -1,0 +1,37 @@
+.operation {
+    font-size: 20px;
+    background-color: orange;
+}
+
+.calculator button {
+    margin: 5px;
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+.number {
+    font-size: 20px;
+    background-color: gray;
+}
+
+.clear {
+    background-color: gray;
+    font-size: 15px;
+}
+
+.calculator_box {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    padding: 20px;
+}
+
+.css-display-calculation {
+    font-size: 35px;
+    margin: 15px 15px 15px 10px;
+}
