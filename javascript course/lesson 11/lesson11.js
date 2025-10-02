@@ -151,3 +151,19 @@ function findIndex(array, word) {
 }
 
 console.log(findIndex(words, 'vivi'));
+
+console.log("r-s;");
+
+const shList = ['egg', 'apple', 'egg', 'egg', 'ham'];
+
+function removeEgg (array) {
+    let counter = 0;
+    let newArray = [];
+    for (let i = 0; i < array.length; i++) {
+        array[i] === 'egg' ? counter++ : undefined;
+        array[i] != 'egg' || counter === 3 ? newArray.push(array[i]) : undefined;
+    }
+    console.log(newArray);
+}
+
+removeEgg(shList);
