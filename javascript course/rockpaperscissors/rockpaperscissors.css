@@ -40,7 +40,8 @@ body {
     margin-bottom: 50px;
 }
 
-.reset-button {
+.reset-button,
+.auto-play-button {
     border-style: none;
     padding: 10px 15px 10px 15px;
     cursor: pointer;

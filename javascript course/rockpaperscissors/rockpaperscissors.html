@@ -11,18 +11,15 @@
     <p class="title">Rock Paper Scissors</p>
     <div class="choices">
         <button onclick="
-            user_pick='rock';
-            pickMove();
+            pickMove('rock');
             "
             ><div class="pic"><img src="images/rock-emoji.png"></div></button>
         <button onclick="
-            user_pick='paper';
-            pickMove();
+            pickMove('paper');
             "
         ><div class="pic"><img src="images/paper-emoji.png"></div></button>
         <button onclick="
-            user_pick='scissors';
-            pickMove();
+            pickMove('scissors');
             "
         ><div class="pic"><img src="images/scissors-emoji.png"></div></button>
     </div>
@@ -32,6 +29,9 @@
     <button class="reset-button" onclick="
         resetButton();
     ">Reset score</button>
+    <button class="auto-play-button" 
+    onclick="autoPlay();"
+    >Auto play</button>
     
 </body>
 </html>

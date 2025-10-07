@@ -3,25 +3,39 @@ let score = JSON.parse(localStorage.getItem('score')) || {
     losses: 0,
     ties: 0
 };
+
 document.querySelector('.js-points').innerHTML =`Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`;
-let user_pick;
+
 let result;
-function pickMove () {
-    let random_num = Math.random();
-    let computer_pick = '';
+let isAutoPlaying = false;
+let intervalId;
 
-    console.log(user_pick);
-
-    if (random_num >= 0 && random_num < 1/3 ){
-        computer_pick = 'rock';
-    } else if (random_num >= 1/3 && random_num < 2/3) {
-        computer_pick = 'paper';
-    } else if (random_num >= 2/3 && random_num < 1) {
-        computer_pick = 'scissors';
+function autoPlay () {
+    if (!isAutoPlaying) {
+        intervalId = setInterval(function() {
+            const playerMove = pickComputerMove();
+            pickMove(playerMove);
+        }, 1000);
+        isAutoPlaying = true;
+    } else {
+        clearInterval(intervalId);
+        isAutoPlaying = false;
     }
+}
 
-    console.log(computer_pick);
+function pickComputerMove () {
+    let random_num = Math.random();
+    if (random_num >= 0 && random_num < 1/3 ){
+        return 'rock';
+    } else if (random_num >= 1/3 && random_num < 2/3) {
+        return 'paper';
+    } else if (random_num >= 2/3 && random_num < 1) {
+       return 'scissors';
+    }
+}
 
+function pickMove (user_pick) {
+    const computer_pick = pickComputerMove();
     if (user_pick === computer_pick) {
         score.ties += 1;
         result = 'Tie.';
