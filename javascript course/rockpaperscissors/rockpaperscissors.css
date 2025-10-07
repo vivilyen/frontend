@@ -41,8 +41,13 @@ body {
 }
 
 .reset-button,
-.auto-play-button {
+.auto-play-button,
+.js-button {
     border-style: none;
     padding: 10px 15px 10px 15px;
     cursor: pointer;
+}
+
+.js-button {
+    margin: 0 5px 0 10px;
 }

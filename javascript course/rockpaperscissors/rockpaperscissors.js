@@ -10,16 +10,54 @@ let result;
 let isAutoPlaying = false;
 let intervalId;
 
+document.querySelector('.js-rock-button')
+    .addEventListener('click', () => {
+        pickMove('rock');
+    });
+document.querySelector('.js-paper-button')
+    .addEventListener('click', () => {
+        pickMove('paper');
+    });
+document.querySelector('.js-scissors-button')
+    .addEventListener('click', () => {
+        pickMove('scissors');
+    });
+
+document.querySelector('.js-auto-play-button')
+    .addEventListener('click', () => {
+        autoPlay();
+    });
+document.querySelector('.js-reset-button')
+    .addEventListener('click', () => {
+        warningBox();
+    });
+
+document.body.addEventListener('keydown', (event) => {
+    if (event.key === 'r') {
+        pickMove('rock');
+    } else if (event.key === 'p') {
+        pickMove('paper');
+    } else if (event.key === 's') {
+        pickMove('scissors');
+    } else if (event.key === 'a') {
+        autoPlay();
+    } else if (event.key === 'Backspace') {
+        warningBox();
+    }
+});
+
 function autoPlay () {
     if (!isAutoPlaying) {
-        intervalId = setInterval(function() {
+        intervalId = setInterval(() => {
             const playerMove = pickComputerMove();
             pickMove(playerMove);
         }, 1000);
+        document.querySelector('.js-auto-play-button').innerHTML = 'Stop playing';
         isAutoPlaying = true;
     } else {
         clearInterval(intervalId);
         isAutoPlaying = false;
+        document.querySelector('.js-auto-play-button').innerHTML = 'Auto play';
     }
 }
 
@@ -75,4 +113,17 @@ function resetButton () {
     document.querySelector('.js-result').innerHTML ='';
     document.querySelector('.js-pick').innerHTML = '';
     document.querySelector('.js-points').innerText =`Wins: ${score.wins} Losses: ${score.losses} Ties: ${score.ties}`;
+}
+
+function warningBox () {
+    document.querySelector('.js-warning-box').innerHTML="<p>Are you sure you want to reset the score?<button class='js-warning-yes-button js-button'>Yes</button><button class='js-warning-no-button js-button'>No</button></p>"
+    document.querySelector('.js-warning-yes-button')
+    .addEventListener('click', () => {
+        resetButton();
+        document.querySelector('.js-warning-box').innerHTML="";
+    });
+    document.querySelector('.js-warning-no-button')
+    .addEventListener('click', () => {
+        document.querySelector('.js-warning-box').innerHTML="";
+    });
 }
