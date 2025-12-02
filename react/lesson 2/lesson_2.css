@@ -1,0 +1,8 @@
+.inputs input {
+    display: block;
+}
+
+.products img {
+    width: 20vw;
+    margin-top: 1vh;
+}

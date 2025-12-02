@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3 - 2</title>
+</head>
+<body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+
+        function Reset ({ inputText, setInputText }) {
+
+            function resetInput () {
+                setInputText('');
+            }
+
+            return (
+                <button onClick={resetInput}>
+                    Reset
+                </button>
+            );
+        }
+
+        function Example ({ inputText, setInputText }) {
+
+            function exampleInput () {
+                setInputText('Alice');
+            }
+
+            return (
+                <button onClick={exampleInput}>
+                    Example
+                </button>
+            );
+        }
+
+        function App() {
+            const [ inputText, setInputText ] = React.useState('');
+
+            function saveInputText (event) {
+                setInputText(event.target.value);
+            }
+
+            return (
+            <>
+                <input 
+                onChange={saveInputText}
+                value={inputText}
+                placeholder="Type your name here" 
+                />
+                <p>Hello {inputText}</p>
+                <Reset 
+                    inputText={inputText}
+                    setInputText={setInputText}
+                />
+                <Example 
+                    inputText={inputText}
+                    setInputText={setInputText}
+                />
+            </>
+            )
+        }
+
+        const container = document.querySelector('.js-container');
+        const root = ReactDOM.createRoot(container);
+        root.render(<App />);
+
+    </script>
+</body>
+</html>
