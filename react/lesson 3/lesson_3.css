@@ -1,0 +1,17 @@
+.content button {
+    background-color: rgb(25, 135, 84);
+    border-style: none;
+    color: white;
+    padding: 1vw 2vw;
+    margin-left: 1vw;
+    height: fit-content;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(222, 222, 222);
+}
+

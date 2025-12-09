@@ -1,72 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+  <head>
     <title>Lesson 3</title>
-</head>
-<body>
+    <link rel="stylesheet" href="lesson_3.css">
+  </head>
+  <body>
     <div class="js-container"></div>
-
-    <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
 
     <script src="https://unpkg.com/supersimpledev/react.js"></script>
     <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
 
     <script src="https://unpkg.com/supersimpledev/babel.js"></script>
     <script type="text/babel">
+      function App() {
+        const [count, setCount] = React.useState(0);
+        const buttonRef = React.useRef();
 
-        function Counter({ count, setCount }) {
-            
-            function increaseCount() {
-                setCount(count + 1);
+        function increaseCount() {
+          setCount(count + 1);
+        }
+
+        function resetCount() {
+          setCount(0);
+        }
+
+        function autoClick() {
+          setInterval(() => {
+            const buttonElem = buttonRef.current;
+            if (buttonElem) {
+              buttonElem.click();
             }
-
-            return (
-                <button onClick={increaseCount}>
-                    Clicked {count} {count === 1 ? 'time' : 'times'}
-                </button>
-            );
+          }, 1000);
         }
 
-        function Reset ({ count, setCount }) {
+        return (
+          <div className="content">
+            <button
+              onClick={increaseCount}
+              ref={buttonRef}
+            >
+              Clicked {count} {count === 1 ? 'time' : 'times'}
+            </button>
+            <button onClick={resetCount}>
+              Reset
+            </button>
+            <button onClick={autoClick}>
+              Auto Click
+            </button>
+          </div>
+        );
+      }
 
-            function resetCount () {
-                setCount(0);
-            }
-
-            return (
-                <button onClick={resetCount}>
-                    Reset
-                </button>
-            );
-        }
-
-        function App() {
-            const [ count, setCount ] = React.useState(0);
-
-            return (
-            <>
-                <Counter  
-                    count={count}
-                    setCount={setCount} 
-                />
-                <Counter
-                    count={count}
-                    setCount={setCount} 
-                />
-                <Reset  
-                    count={count}
-                    setCount={setCount} 
-                />
-            </>
-            )
-        }
-
-        const container = document.querySelector('.js-container');
-        const root = ReactDOM.createRoot(container);
-        root.render(<App />);
-
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(<App />);
     </script>
-</body>
+  </body>
 </html>

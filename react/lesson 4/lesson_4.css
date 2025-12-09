@@ -1,0 +1,58 @@
+.OFF-button,
+.ON-button {
+    color: white;
+    border-style: none;
+    padding: 1vw 2vw;
+    border-radius: 0.75vw;
+    cursor: pointer;
+}
+
+.ON-button {
+    background-color: rgb(25, 135, 84);
+}
+
+.OFF-button {
+    background-color: rgb(220, 53, 69);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-weight: bolder;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+}
+
+.inputs input {
+    margin: 0.5vw 0;
+    padding: 1vw;
+    border-radius: 0.75vw;
+    border-style: 0.5vw solid gray;
+}
+
+.buttons button,
+.layout button {
+    background-color: rgb(0, 123, 255);
+    color: white;
+    border-style: none;
+    padding: 1vw 2vw;
+    border-radius: 1vw;
+    margin: 2vw 0.5vw;
+    cursor: pointer;
+}
+
+.layout {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+}
+
+.layout button {
+    margin: 0.75vw;
+}
