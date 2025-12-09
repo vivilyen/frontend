@@ -1,32 +1,7 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState } from 'react'
 import { ChatInput } from './components/ChatInput'
-import { ChatMessage } from './components/ChatMessage'
+import ChatMessages from './components/ChatMessages'
 import './App.css'
-
-function ChatMessages({ chatMessages }) {
-  const chatMessagesRef = useRef(null);
-
-  useEffect(() => {
-    const containerElem = chatMessagesRef.current;
-    if (containerElem) {
-      containerElem.scrollTop = containerElem.scrollHeight;
-    }
-  }, [chatMessages]);
-
-  return (
-    <div className="chat-messages-container" ref={chatMessagesRef}>
-      {chatMessages.map((chatMessage) => {
-        return (
-          <ChatMessage
-            message={chatMessage.message}
-            sender={chatMessage.sender}
-            key={chatMessage.id}
-          />
-        );
-      })}
-    </div>
-  );
-} 
 
 function App() {
     const [chatMessages, setChatMessages] = useState([{
@@ -63,4 +38,4 @@ function App() {
     );
   }
 
-export default App
+export default App;
